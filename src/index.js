@@ -2,18 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-// ----------------- Second HOmework -----------------
-const cTime = new Date().toLocaleTimeString();
-const cDate = new Date().toLocaleDateString();
+// ----------------- Inline CSS-----------------
+const inlineCss = {
+    color: "black",
+    fontSize: "20px"
+};
 ReactDOM.render(
-    <div>
-        <h1>Hii,I am Aditi</h1>
-        <p>Here is the current time {cTime}</p>
-        <p>Here is the current date {cDate}</p>
-
+    <div style={inlineCss}>
+        <h1>Hello World</h1>
     </div>,
     document.getElementById('root')
 )
+
+// ----------------- Second HOmework -----------------
+// const cTime = new Date().toLocaleTimeString();
+// const cDate = new Date().toLocaleDateString();
+// ReactDOM.render(
+//     <div>
+//         <h1>Hii,I am Aditi</h1>
+//         <p>Here is the current time {cTime}</p>
+//         <p>Here is the current date {cDate}</p>
+
+//     </div>,
+//     document.getElementById('root')
+// )
 
 // ----------------- Function -----------------
 // const name = 'Aditi'
