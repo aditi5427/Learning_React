@@ -1,18 +1,54 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-// ----------------- Inline CSS-----------------
-const inlineCss = {
-    color: "black",
-    fontSize: "20px"
-};
+// ----------------- Revision -----------------
+// ReactDOM.render(
+//     <>
+
+//     </>,
+//     document.getElementById('root')
+// )
+
+// ----------------- Third HOmework -----------------IMPORTANT-------------------
+let cTime = new Date(2023, 1, 5, 5);
+cTime = cTime.getHours();
+
+let greeting = ' ';
+let css = {};
+
+if (cTime >= 1 && cTime < 12) {
+    greeting = 'Good Morning';
+    css.color = 'green';
+
+} else if (cTime >= 12 && cTime < 19) {
+    greeting = 'Good Afternoon';
+    css.color = 'yellow';
+
+} else {
+    greeting = 'Good Night';
+    css.color = 'black';
+}
+
 ReactDOM.render(
-    <div style={inlineCss}>
-        <h1>Hello World</h1>
-    </div>,
+    <>
+        <h1>Hello, <span style={css}>{greeting}</span> </h1>
+    </>,
     document.getElementById('root')
 )
+
+// ----------------- Inline CSS-----------------
+// const inlineCss = {
+//     color: "black",
+//     fontSize: "20px"
+// };
+// ReactDOM.render(
+//     <div style={inlineCss}>
+//         <h1>Hello World</h1>
+//     </div>,
+//     document.getElementById('root')
+// )
 
 // ----------------- Second HOmework -----------------
 // const cTime = new Date().toLocaleTimeString();
