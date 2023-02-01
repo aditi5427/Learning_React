@@ -2,41 +2,49 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Comp from './Comp';
 
-// ----------------- Revision -----------------
+ReactDOM.render(
+    <Comp></Comp>,
+    document.getElementById('root')
+)
+
+// ----------------- Component -----------------
 // ReactDOM.render(
 //     <>
-
+//     <Comp></Comp>
 //     </>,
 //     document.getElementById('root')
 // )
 
+
 // ----------------- Third HOmework -----------------IMPORTANT-------------------
-let cTime = new Date(2023, 1, 5, 5);
-cTime = cTime.getHours();
+// let cTime = new Date(2023, 1, 5, 5);
+// cTime = cTime.getHours();
 
-let greeting = ' ';
-let css = {};
+// let greeting = ' ';
+// let css = {};
 
-if (cTime >= 1 && cTime < 12) {
-    greeting = 'Good Morning';
-    css.color = 'green';
+// if (cTime >= 1 && cTime < 12) {
+//     greeting = 'Good Morning';
+//     css.color = 'green';
 
-} else if (cTime >= 12 && cTime < 19) {
-    greeting = 'Good Afternoon';
-    css.color = 'yellow';
+// } else if (cTime >= 12 && cTime < 19) {
+//     greeting = 'Good Afternoon';
+//     css.color = 'yellow';
 
-} else {
-    greeting = 'Good Night';
-    css.color = 'black';
-}
+// } else {
+//     greeting = 'Good Night';
+//     css.color = 'black';
+// }
 
-ReactDOM.render(
-    <>
-        <h1>Hello, <span style={css}>{greeting}</span> </h1>
-    </>,
-    document.getElementById('root')
-)
+// ReactDOM.render(
+//     <>
+//         <h1>Hello, <span style={css}>{greeting}</span> </h1>
+//     </>,
+//     document.getElementById('root')
+// )
+
 
 // ----------------- Inline CSS-----------------
 // const inlineCss = {
@@ -49,6 +57,7 @@ ReactDOM.render(
 //     </div>,
 //     document.getElementById('root')
 // )
+
 
 // ----------------- Second HOmework -----------------
 // const cTime = new Date().toLocaleTimeString();
@@ -63,14 +72,16 @@ ReactDOM.render(
 //     document.getElementById('root')
 // )
 
+
+//         <p>Hii i am {name}</p>
+//         <p>add
 // ----------------- Function -----------------
 // const name = 'Aditi'
 // ReactDOM.render(
-//     <div>
-//         <p>Hii i am {name}</p>
-//         <p>add 2 + 3  is {2 + 3}</p>
+//     <div> 2 + 3  is {2 + 3}</p>
 //     </div>, document.getElementById('root'
 //     ))
+
 
 // ----------------- First Homework -----------------
 // ReactDOM.render(
@@ -87,6 +98,7 @@ ReactDOM.render(
 //     </div>,
 //     document.getElementById('root'))
 
+
 // ----------------- In form of array -----------------
 // ReactDOM.render(
 //     [
@@ -94,6 +106,7 @@ ReactDOM.render(
 //         <h2>i am Adiit</h2>
 //     ],
 //     document.getElementById('root'))
+
 
 // ----------------- With the help of div, we can write multiple jsx -----------------
     // ReactDOM.render(
@@ -103,6 +116,7 @@ ReactDOM.render(
     //     </div>,
     //     document.getElementById('root'))
 
+     
 //----------------- JSX -----------------
 // ReactDOM.render(<h1>Hello world</h1>,
 //     document.getElementById('root'))
