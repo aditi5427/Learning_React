@@ -1,13 +1,34 @@
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Comp from './Comp';
+import ReactDOM from 'react-dom/client';
 
-ReactDOM.render(
-    <Comp></Comp>,
-    document.getElementById('root')
-)
+import App from './App';
+import './index.css';
+import valentines from './Image/valentines.jpg'
+// import Comp from './Comp';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+
+// ----------------- Import & Export Module Homework -----------------
+// import add, {sub, multi, div} from './Module'
+// ReactDOM.render(
+//     <>
+//     <ul>
+//         <li>sum {add (2,4) }</li>
+//         <li>sub {sub (8,4) }</li>
+//         <li>multiply { multi (3,5)}</li>
+//         <li>divide {div(8,2) }</li>
+//     </ul>
+//     </>,
+//     document.getElementById('root')
+// )
 
 // ----------------- Component -----------------
 // ReactDOM.render(

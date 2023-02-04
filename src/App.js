@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    function handleCalc(e) {
+        e.preventDefault()
+        const firstNum = e.target.first.value;
+        const secNum = e.target.second.value;
+
+        console.log(firstNum);
+        console.log(secNum);
+        console.log(parseInt(firstNum) + parseInt(secNum));
+        console.log(parseInt(firstNum) * parseInt(secNum));
+    }
+    return (
+        <form onSubmit={handleCalc} className="App">
+            <input type='number' name='first' />
+            <input type='number' name='second' />
+            <button>submit</button>
+        </form>
+    );
 }
 
 export default App;
