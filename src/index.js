@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App';
 import './index.css';
-import valentines from './Image/valentines.jpg'
+// import valentines from './Image/valentines.jpg'
 // import Comp from './Comp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

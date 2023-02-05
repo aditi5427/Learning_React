@@ -1,24 +1,23 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import './App.css';
+// import valentines from './Image/valentines.jpg';
+const myElement = <App naam='aditi' pata='ashanagar' rollNo='3' />;
+function App(props) {
 
-function App() {
-    function handleCalc(e) {
-        e.preventDefault()
-        const firstNum = e.target.first.value;
-        const secNum = e.target.second.value;
-
-        console.log(firstNum);
-        console.log(secNum);
-        console.log(parseInt(firstNum) + parseInt(secNum));
-        console.log(parseInt(firstNum) * parseInt(secNum));
-    }
     return (
-        <form onSubmit={handleCalc} className="App">
-            <input type='number' name='first' />
-            <input type='number' name='second' />
-            <button>submit</button>
-        </form>
-    );
+        <>
+            <div className='name'>My name is {props.naam}</div>
+            <div className='address'>I live at {props.pata}</div>
+            <div className='roll'>my roll no is {props.rollNo}</div>
+        </>
+    )
+
 }
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+
+
+
 
 export default App;
