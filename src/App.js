@@ -1,9 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { ReactDOM } from 'react';
 import './App.css';
-// import valentines from './Image/valentines.jpg';
-
-const myElement = <App naam='aditi' pata='ashanagar' rollNo='3' />;
 
 
 //------------Array Map------------
@@ -11,20 +8,26 @@ const myElement = <App naam='aditi' pata='ashanagar' rollNo='3' />;
 // let newArr = arr.map(function (val) {
 //     return val
 // });
+//----Array Map arrow function----
+// const newArr = arr.map((val) => val);
 // console.log(newArr)
 //------------Array Map------------
 
-function App(props) {
+function App({
+    person,
+    age,
+    address
+}) {
     return (
         <>
-            <div className='name'>My name is {props.naam}</div>
-            <div className='address'>I live at {props.pata}</div>
-            <div className='roll'>my roll no is {props.rollNo}</div>
+            <div className='person'>My name is {person}</div>
+            <div className='age'>age is {age}</div>
+            <div className='address'>address is {address}</div>
         </>
-    )
 
+    )
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
+root.render(<App />);
 
 export default App;
