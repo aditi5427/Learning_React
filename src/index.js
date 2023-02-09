@@ -16,6 +16,17 @@ root.render(
     </React.StrictMode>
   );
 
+  //------------Array Map------------
+// const arr = ['potato', 'tomato', 'onion'];
+// let newArr = arr.map(function (val) {
+//     return val
+// });
+//----Array Map arrow function----
+// const newArr = arr.map((val) => val);
+// console.log(newArr)
+//------------Array Map------------
+
+
 // ----------------- Import & Export Module Homework -----------------
 // import add, {sub, multi, div} from './Module'
 // ReactDOM.render(

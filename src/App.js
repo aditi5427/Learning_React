@@ -1,33 +1,44 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import { ReactDOM } from 'react';
 import './App.css';
 
+const Slot = (props) => {
+    let x = props.x;
+    let y = props.y;
+    let z = props.z;
 
-//------------Array Map------------
-// const arr = ['potato', 'tomato', 'onion'];
-// let newArr = arr.map(function (val) {
-//     return val
-// });
-//----Array Map arrow function----
-// const newArr = arr.map((val) => val);
-// console.log(newArr)
-//------------Array Map------------
+    if (x === y && y === z) {
+        return (
+            <>
+                <h2>{x} {y} {z}</h2>
+                <h2>This is matching</h2>
+                <hr />
+            </>
+        )
+    } else {
+        return (
+            <>
+                <h2>{x} {y} {z}</h2>
+                <h2>This is not matching</h2>
+                <hr />
+            </>
+        )
+    }
+}
 
-function App({
-    person,
-    age,
-    address
-}) {
+const App = () => {
     return (
         <>
-            <div className='person'>My name is {person}</div>
-            <div className='age'>age is {age}</div>
-            <div className='address'>address is {address}</div>
+            <h1>Matching game</h1>
+            <Slot x='a' y='a' z='a' />
+            <Slot x='a' y='b' z='a' />
+            <Slot x='b' y='b' z='b' />
+            <Slot x='a' y='c' z='a' />
+            <Slot x='c' y='c' z='a' />
+
         </>
 
     )
-}
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
 
+}
 export default App;
