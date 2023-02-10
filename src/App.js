@@ -36,6 +36,8 @@ const App = () => {
             <Slot x='a' y='c' z='a' />
             <Slot x='c' y='c' z='a' />
 
+
+
         </>
 
     )
