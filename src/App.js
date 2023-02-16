@@ -1,45 +1,20 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-const Slot = (props) => {
-    let x = props.x;
-    let y = props.y;
-    let z = props.z;
-
-    if (x === y && y === z) {
-        return (
-            <>
-                <h2>{x} {y} {z}</h2>
-                <h2>This is matching</h2>
-                <hr />
-            </>
-        )
-    } else {
-        return (
-            <>
-                <h2>{x} {y} {z}</h2>
-                <h2>This is not matching</h2>
-                <hr />
-            </>
-        )
-    }
-}
-
 const App = () => {
+    //const state = useState();
+    const [count, setcount] = useState(0);
+
+    const Increase = () => {
+        return (
+            setcount(count + 1)
+        )
+    };
     return (
         <>
-            <h1>Matching game</h1>
-            <Slot x='a' y='a' z='a' />
-            <Slot x='a' y='b' z='a' />
-            <Slot x='b' y='b' z='b' />
-            <Slot x='a' y='c' z='a' />
-            <Slot x='c' y='c' z='a' />
-
-
-
+            <h1 >{count}</h1>
+            <button onClick={Increase}>Click</button>
         </>
-
     )
 
 }
