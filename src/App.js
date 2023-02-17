@@ -2,20 +2,16 @@ import React, { useState } from 'react';
 import './App.css';
 
 const App = () => {
-    //const state = useState();
-    const [count, setcount] = useState(0);
+    let newTime = new Date().toLocaleTimeString();
+    const [cTime, setTime] = useState(newTime);
 
-    const Increase = () => {
-        return (
-            setcount(count + 1)
-        )
-    };
+    const updateTime = () => {
+        newTime = new Date().toLocaleTimeString();
+        setTime(newTime)
+    }
+    setInterval(updateTime, 1000);
     return (
-        <>
-            <h1 >{count}</h1>
-            <button onClick={Increase}>Click</button>
-        </>
+        <h1>{cTime}</h1>
     )
-
 }
-export default App;
+export default App; 

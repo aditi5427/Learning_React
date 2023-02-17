@@ -16,6 +16,26 @@ root.render(
     </React.StrictMode>
   );
 
+
+  //------------Hooks------------
+  // const App = () => {
+  //   //const state = useState();
+  //   const [count, setcount] = useState(0);
+
+  //   const Increase = () => {
+  //       return (
+  //           setcount(count + 1)
+  //       )
+  //   };
+  //   return (
+  //       <>
+  //           <h1 >{count}</h1>
+  //           <button onClick={Increase}>Click</button>
+  //       </>
+  //   )
+
+  // }
+
   //-----------Slot Machine Game------------
 //   const Slot = (props) => {
 //     let x = props.x;
