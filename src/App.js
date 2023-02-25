@@ -2,16 +2,19 @@ import React, { useState } from 'react';
 import './App.css';
 
 const App = () => {
-    let newTime = new Date().toLocaleTimeString();
-    const [cTime, setTime] = useState(newTime);
+    const color = "yellow";
+    const [bg, setbg] = useState(color)
 
-    const updateTime = () => {
-        newTime = new Date().toLocaleTimeString();
-        setTime(newTime)
-    }
-    setInterval(updateTime, 1000);
+    const changeColor = () => {
+        let newBg = "green"
+        setbg(newBg);
+    };
     return (
-        <h1>{cTime}</h1>
+        <>
+            <div style={{ backgroundColor: bg }}>
+                <button onClick={changeColor}> click me</button>
+            </div>
+        </>
     )
 }
-export default App; 
+export default App;
