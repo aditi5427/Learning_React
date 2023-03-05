@@ -2,19 +2,27 @@ import React, { useState } from 'react';
 import './App.css';
 
 const App = () => {
-    const color = "yellow";
-    const [bg, setbg] = useState(color)
+    const [name, setName] = useState()
+    const [fullName, setfullname] = useState();
 
-    const changeColor = () => {
-        let newBg = "green"
-        setbg(newBg);
-    };
+    const innerEvent = (event) => {
+        console.log(event.target.value);
+        setName(event.target.value);
+    }
+
+    const onSubmit = () => {
+        setfullname(name);
+    }
+
+
     return (
         <>
-            <div style={{ backgroundColor: bg }}>
-                <button onClick={changeColor}> click me</button>
-            </div>
+            <h1>hello {fullName}</h1>
+            <input type='text' placeholder='Enter youe name' onChange={innerEvent} />
+            <button onClick={onSubmit} >Click</button>
         </>
     )
-}
+};
+
 export default App;
+
