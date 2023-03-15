@@ -36,3 +36,25 @@
  	font-weight: 500;
 
  }
+
+ .toDoStyle {
+ 	display: flex !important;
+ }
+
+ .toDoStyle button {
+ 	height: 28px;
+ 	padding-top: 5px;
+ 	font-size: 20px;
+ 	margin-right: 10px;
+ }
+
+ .toDoStyle button:hover {
+
+ 	background-color: rgb(223, 39, 39);
+ 	border: 2px solid rgb(223, 39, 39);
+ 	color: white;
+ }
+
+ .toDoStyle li {
+ 	margin-bottom: 20px;
+ }
