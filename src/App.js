@@ -1,28 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 // import ToDo from "./ToDo";
 
 const App = () => {
     const [num, setNum] = useState(0);
-    const increNum = () => {
-        setNum(num + 1)
-    }
+    const [nums, setNums] = useState(0);
 
-    const decreNum = () => {
-        if (num > 0) {
-            setNum(num - 1)
-        } else {
-            alert('limit reached')
-            setNum(0)
-        }
-
-    }
+    useEffect((num) => {
+        alert('button pressed')
+    }, [nums])
 
     return (
         <>
             <div>{num}</div>
-            <button onClick={increNum}>Increase</button>
-            <button onClick={decreNum}>Decrease</button>
+            <button onClick={() => {
+                setNum(num + 1)
+            }
+            }>click {num}</button>
+
+            <button onClick={() => {
+                setNums(nums + 1)
+            }
+            }>click {nums}</button>
         </>
     )
 }
