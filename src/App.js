@@ -8,7 +8,8 @@ const App = () => {
 
     useEffect((num) => {
         alert('button pressed')
-    }, [nums])
+    }, [num]
+    );
 
     return (
         <>
