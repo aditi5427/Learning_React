@@ -15,8 +15,36 @@ root.render(
     </React.StrictMode>
   );
 
-  // Increase / decrease 
-  // const App = () => {
+
+  //------------UseEffect------------
+//   const App = () => {
+//     const [num, setNum] = useState(0);
+//     const [nums, setNums] = useState(0);
+
+//     useEffect((num) => {
+//         alert('button pressed')
+//     }, [num]
+//     );
+
+//     return (
+//         <>
+//             <div>{num}</div>
+//             <button onClick={() => {
+//                 setNum(num + 1)
+//             }
+//             }>click {num}</button>
+
+//             <button onClick={() => {
+//                 setNums(nums + 1)
+//             }
+//             }>click {nums}</button>
+//         </>
+//     )
+// }
+
+
+// -----------Increase / decrease----------- 
+// const App = () => {
 //     const [num, setNum] = useState(0);
 //     const increNum = () => {
 //         setNum(num + 1)
@@ -29,9 +57,7 @@ root.render(
 //             alert('limit reached')
 //             setNum(0)
 //         }
-
 //     }
-
 //     return (
 //         <>
 //             <div>{num}</div>
@@ -41,7 +67,7 @@ root.render(
 //     )
 // }
 
-// ToDO list
+// -----------ToDO list-----------
 //   const App = () => {
 //     const [inputList, setInputList] = useState(" ");
 //     const [item, setItem] = useState([]);
@@ -89,7 +115,7 @@ root.render(
 //     )
 // }
 
-
+// -----------Print name in the top-----------
 //   const App = () => {
 //     const [name, setName] = useState()
 //     const [fullName, setfullname] = useState();
